@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение JS #8: Условный оператор--switch</title>
+    <script src="index8.js"></script>
+</head>
+<body>
+
+    <p> Описание:</p>
+    <p>В JavaScript switchможет заменять несколько ifоператоров.</p>
+<br>
+switch(n){ <br>
+  case 1:   <br>
+    //code block <br>
+    break; <br>
+  case 2: <br>
+    //code block <br>
+    break; <br>
+  case ...: <br>
+    //code block <br>
+    break; <br>
+    <br>
+  default:       //default is optional, sometimes it can be omitted <br>
+    //code block <br>
+                 //The last one does not need break<br>
+}<br> 
+<p>
+switch является ключевым словом и nявляется переменной для переключения. case 1означает когда n===1. <br>После " :" вы можете добавить свой код для того, что делать в этом случае.<br> Ключевое слово breakиспользуется для завершения - если вы забыли break,<br> код продолжит выполняться через другие caseоператоры и defaultдо тех пор, пока breakне появится .<br> Если ни один caseоператор не соответствует, defaultвводится .
+</p>
+В некоторых случаях switchутверждение яснее, чем if..elseутверждение. <br>
+<br>
+<h3>Например, мы можем написать функцию для вычисления того, какой сегодня день, например:</h3>
+<br>
+function whatDayIsToday(n){<br>
+  // getDay() is a method of Date() - we will learn this later<br>
+  var day=new Date().getDay(),x; <br>
+  switch (day){<br>
+    case 0:<br>
+      x="Today it's Sunday";<br>
+      break;<br>
+    case 1:<br>
+      x="Today it's Monday";<br>
+      break;<br>
+    case 2:<br>
+      x="Today it's Tuesday";<br>
+      break;<br>
+    case 3:<br>
+      x="Today it's Wednesday";<br>
+      break;<br>
+    case 4:<br>
+      x="Today it's Thursday";<br>
+      break;<br>
+    case 5:<br>
+      x="Today it's Friday";<br>
+      break;<br>
+    case 6:<br>
+      x="Today it's Saturday";<br>
+      break;<br>
+  }<br>
+  return x;<br>
+}<br>
+<h3>Задача</h3>
+Завершите функцию howManydays. Она принимает 1 параметр month, что означает месяц года.<br> Разные месяцы имеют разное количество дней, как показано в таблице ниже. <br> Верните количество дней, которые находятся в month. <br> Нет необходимости в проверке входных данных: месяц всегда будет больше 0 и меньше или равен 12.<br>
+<br>
++---------------+-------------+<br>
+|    month      |    days     |<br>
++---------------+-------------+<br>
+|1,3,5,7,8,10,12|     31      |<br>
++---------------+-------------+<br>
+|4,6,9,11       |     30      |<br>
++---------------+-------------+<br>
+|2              |     28      |  (Do not consider the leap year)<br>
++---------------+-------------+<br>
+Совет: использование defaultв большинстве случаев может сократить объем вашей работы.<br>
+<br>
+Когда вы закончите, нажмите «Тест», чтобы проверить ваш код на начальных тестах и ​​«Попытка»,<br> чтобы проверить ваш код на всех тестах. Если вы прошли все тесты, вы можете нажать «Отправить», чтобы отправить ваш код.<br>
+<br>
+function howManydays(month){<br>
+    var days;<br>
+    switch (){<br>
+        <br>
+    }<br>
+    return days;<br>
+  }<br>
+  <br>
+</body>
+</html>

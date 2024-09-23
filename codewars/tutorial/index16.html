@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="index16.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение JS #16: Методы объекта String — slice(), substring() и substr()</title>
+    <link rel="stylesheet" href="styles16.css" />
+
+    <pre>
+        С этого урока мы начнем изучать строковые объекты.<br>
+        <br>
+Прежде всего, рассмотрим атрибуты String:. length <br>Используйте StringObject.length для получения длины строки, например:<br>
+<br>
+var str="dsfsdwesdfsadfwerfsdfsdfsdfsdfsdf";<br>
+console.log(str.length)  //output: 33<br>
+Во-вторых, строка может быть как массив. Каждый символ в строке имеет индекс.<br> Мы можем использовать индекс для доступа к этому символу. Вот так:<br>
+<pre>
+var str="codewars";
+<p>for (var i=0;i<str.length;i++) console.log(str[i])</p>
+output:
+c
+o
+d
+e
+w
+a
+r
+s
+Объект String имеет множество методов, многие из этих методов используются для изменения стиля и цвета текста веб-страницы. <br>Эти методы редко используются в программировании, а некоторые из них уже устарели. Поэтому мы пропустим изучение этих методов. Вот эти методы:<br>
+<div class="div1">
+anchor()    Create HTML anchor.
+big()       Display a string in a large font.
+blink()     Display flashing string.
+bold()      Use bold display string.
+fixed()     Using a typewriter text display string.
+fontcolor() Displays a string using the specified color.
+fontsize()  Displays a string using the specified size.
+italics()   Use italics string.
+link()      Display a string as a link.
+small()     Use small size to display string.
+strike()    Use the delete line to display the string.
+sub()       Display the string as a subscript.
+sup()       Display the string as a superscript.
+</div>
+<br>
+На этот раз мы изучим три метода, которые используются для получения подстроки строки:<br> slice() substring()и substr(). Их использование:
+<br>
+StringObject.slice(startindex,endindex)
+StringObject.substring(startindex,endindex)
+StringObject.substr(startindex,length)
+Здесь мы приводим несколько примеров, иллюстрирующих их использование и различия:
+
+var str="Hello World!";
+console.log(str.slice(6))
+console.log(str.substring(6))
+console.log(str.substr(6))
+//output:
+World!
+World!
+World!
+Мы видим, первый параметр startindex нельзя опустить, он представляет начало перехвата строки. <br>Второй параметр можно опустить, метод three перехватит строку до конца строки. Посмотрите на следующий пример:
+
+var str="Hello World!";
+console.log(str.slice(0,5))
+console.log(str.substring(0,5))
+console.log(str.substr(0,5))
+//output:
+Hello
+Hello
+Hello
+Мы видим, когда startindex равен 0, результаты, полученные тремя методами, одинаковы. Но на самом деле их операции различны. slice()и substring()перехваченные символы от index0 до index5 (не включая index5). Операция substr заключается в том, чтобы начать с index0, перехват подстроки длиной 5. Посмотрите на следующий пример:
+
+var str="Hello beautiful World!";
+console.log(str.slice(6,16))
+console.log(str.substring(6,16))
+console.log(str.substr(6,9))
+//output:
+beautiful 
+beautiful 
+beautiful
+Мы видим, для того, чтобы перехватить одну и ту же строку "beautyful", они используют разные параметры. Похоже, что использование substring и slice похоже, в чем разница между ними? Посмотрите на следующий пример:
+
+var str="Hello beautiful World!";
+console.log(str.slice(16,21))
+console.log(str.substring(16,21))
+console.log(str.slice(16,-1))
+//output:
+World
+World
+World
+Из этого примера мы видим, что параметры slice()могут быть отрицательными числами. Отрицательное значение начинается справа. -1 — это первая позиция справа (в конце этой строки).
+
+Одним словом, для silce()и substring()мы обычно выбираем slice(), потому что это более гибко и просто. Мы можем выбирать их использование в соответствии с различными потребностями.
+
+Хорошо, урок окончен. Давайте выполним какое-нибудь задание.
+
+Задача
+Кодирование в функции cutIt, функция принимает 1 параметр: arr. arr— массив строк.
+
+Первая миссия: Пересекая arr, найдите самую короткую длину строки.
+
+Вторая миссия: arrСнова проходя, перехватите все строки до самой короткой длины (начните с index0). Для этого можно использовать slice(), substring() или substr(). После завершения работы верните результат.
+
+например:
+
+cutIt(["ab","cde","fgh"]) should return ["ab","cd","fg"]
+cutIt(["abc","defgh","ijklmn"]) should return ["abc","def","ijk"]
+cutIt(["codewars","javascript","java"]) should return ["code","java","java"]
+    </pre>
+</head>
+<body>
+    
+</body>
+</html>

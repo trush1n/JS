@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam_4</title>
+</head>
+<body>
+  <input type="text" id="myInput">
+  <button id="myButton">Перейти на сайт</button>
+  <p>ПОСЕЩЕННЫЕ САЙТЫ:</p>
+  <div id="output"></div>
+  <script>
+const input = document.getElementById("myInput");
+const button = document.getElementById("myButton");
+const divOutput = document.getElementById("output");
+
+button.addEventListener("click", function () {
+  const text = input.value;
+  const newElement = document.createElement("p");
+  newElement.textContent = text;
+  divOutput.appendChild(newElement); // Здесь уже правильный код
+  input.value = "";
+  window.open(`https://${text}`, '_blank');
+});
+
+  </script>
+</body>
+</html>
+// ! ЧИТАЙ ВНИМАТЕЛЬНО, НЕ СПЕШИ:
+// Нужно что-то поделать со строкой XXX.YYY(newElement)
+// Здесь должен добавляться напечатанный нами адрес в список дивки
+// Пример: див.добавь (через ТОЧКУ, то что в скобках писать не нужно)
+// Не забудь подправить и это чудо:
+// const назовиМеняКакНазываетсяДивка= document.getElementById("output");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exam_4</title>
+</head>
+
+<body>
+  <button id="btn">КНОПКА</button>
+  <script>
+    const button = document.querySelector('#btn');
+    button.addEventListener('click', () => {
+      console.log('click!');
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+// ! ЧИТАЙ ВНИМАТЕЛЬНО, НЕ СПЕШИ:
+// Помоги подключиться к кнопке заменив заглушку XXX на рабочий код
+// Пример: %keyPress (БЕЗ ПРОБЕЛОВ И КАВЫЧЕК)
+// КАВЫЧКИ СТАВИТЬ НЕ НУЖНО! -->

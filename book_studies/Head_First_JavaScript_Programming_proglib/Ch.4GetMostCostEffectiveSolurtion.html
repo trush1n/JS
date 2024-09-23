@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getMostEffectiveSolution(scores, costs, highscore) {
+        var cost = 100;
+        var index;
+
+        for (var i = 0; i< scores.length; i++){
+            if (scores[i] == highscore) {
+                if (cost > costs[i]) {
+                    index = i;
+                    cost =costs[i];
+                }
+            }
+        }
+        return index
+        }
+        var mostCostEffective = getMostEffectiveSolution(scores, costs, highscore);
+        console.log("Bubble solution #" + mostCostEffective + " is the most cost effective")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

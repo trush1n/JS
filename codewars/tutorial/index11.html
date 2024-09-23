@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение JS #11: оператор цикла --break,continue</title>
+    <script src="index11.js"></script>
+<br>
+    Описание:<br>
+Мы видели breakв операторе switch, что он может выпрыгивать из оператора switch.<br> Его также можно использовать в операторе loop. <p>Пример:</p>
+<br>
+function findFirstOddNumber(arr){<br>
+  var result;<br>
+  for (var i=0;i<arr.length;i++){<br>
+    if (arr[i]%2==1){<br>
+      result=arr[i];<br>
+      break;<br>
+    }<br>
+  }<br>
+  return result;<br>
+}<br>
+В этом примере цикл for проходит по массиву arr.<br> Когда встречается первое нечетное число,<br> breakоператор выводит оператор из цикла <br>for.
+<br>
+В операторе цикла мы можем использовать continueпропуск части кода.<br> Например, следующий код игнорирует отрицательные значения:<br>
+<br>
+function dontDisplayNegative(arr){<br>
+  for (var i=0;i<arr.length;i++){<br>
+    if (arr[i]<0) continue;   >
+    console.log(arr[i])<br>
+  }<br>
+}<br>
+В этом примере console.log(arr[i])никогда не выполняется для отрицательного элемента. <br>благодаря continue.<br>
+<br>
+Используя breakand continue, <br>вы можете сделать оператор цикла более гибким и удобным.<br>
+<br>
+Хорошо, урок окончен. Давайте выполним задание с breakи continue.<br>
+<br>
+<p>Задача</p>
+Кодирование в функции grabDoll.<br> Функция принимает 1 параметр: dolls.<br> это массив строк, список некоторых кукол.<br>
+<br>
+Вам нужно пройти dollsс помощью forцикла.<br> Если элемент — «Hello Kitty» или «Barbie doll», <br>вы должны поместить его в bag(bag — это <br>массив, который я определил в функции); <br>если это другие строки, мы должны использовать continueskip.<br>
+<br>
+Когда bagимеет три элемента, bagзаполнен.<br> Вы должны использовать breakjump out цикла;<br> Если bagне заполнен, вы должны пройти dollsдо последнего элемента.<br>
+<br>
+Возврат bagпосле завершения цикла for.<br>
+<br>
+Вам следует использовать for, breakи continueв вашем коде.<br> в противном случае ваше решение может не пройти этот тест.<br>
+<br>
+Если вы забыли, как поместить элемент в массив, обратитесь к уроку 4 .<br>
+</head>
+<body>
+    
+</body>
+</html>

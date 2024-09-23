@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение JS #7: if..else и тернарный оператор</title>
+    <script src="index7.js"></script>
+</head>
+<body>
+    <p> Описание:</p>
+    <p>В JavaScript if..else— это самый простой условный оператор, он состоит из трех частей: condition, statement1, statement2, например:
+    </p>
+if (condition) statementa <br>
+else           statementb <br>
+<p>Это означает, что если условие истинно, то выполнить операторa, в противном случае выполнить оператор "b". Если операторa или операторb занимают больше одной строки,<br> вам нужно добавить {and }в начале и в конце операторов в JS, чтобы сохранить тот же отступ в Python и добавить an endв Ruby там, где он действительно заканчивается.
+</p>
+<p>Например, если мы хотим определить, является ли число четным или нечетным, мы можем написать такой код:
+</p>
+function oddEven(n){  <br>
+  if (n % 2 == 1) return "odd number"; <br>
+  else            return "even number"; <br>
+} <br>
+<p>Если необходимо оценить более одного условия, мы можем использовать составной оператор if...else. Например:
+</p>
+function oldYoung(age){   <br>
+  if (age < 16)      return "children"   <br>
+  else if (age < 50) return "young man"   //use "else if" if needed  <br>
+  else               return "old man"   <br>
+} <br>
+<p>Эта функция возвращает разное значение в зависимости от возраста параметра. </p>
+
+<p>Выглядит очень сложно? Ну, JS и Ruby тоже поддерживают, ternary operatorи в Python тоже есть что-то похожее:</p>
+<br>
+condition ? statementa : statementb  <br>
+<p>Условие и оператор разделены "?", другой оператор разделен ":" как в Ruby, так и в JS; в Python вы помещаете условие между двумя альтернативами.<br> Два приведенных выше примера можно упростить с помощью тернарного оператора:
+</p><br>
+function oddEven(n){<br>
+  return n%2 == 1 ? "odd number" : "even number";<br>
+}<br>
+function oldYoung(age){<br>
+  return age < 16 ? "children" : age < 50 ? "young man" : "old man";<br>
+}<br>
+Задача:<br>
+<p>Полная функция saleHotdogs/ SaleHotDogs/ sale_hotdogs, функция принимает 1 параметр:<br> n, n — количество хотдогов, которое купит клиент, разные числа имеют разные цены (см. следующую таблицу),<br> возвращает сумму, которую клиент потратит на покупку этого количества хотдогов.
+</p><br>
+количество хот-догов	цена за единицу (центы)<br>
+п < 5	100<br>
+n >= 5 и n < 10	95<br>
+п >= 10	90<br>
+Для завершения можно использовать if..else или тернарный оператор.<br>
+<p>
+When you have finished the work, click "Run Tests" to see if your code is working properly.
+</p>
+<p>In the end, click "Submit" to submit your code and pass this kata.</p>
+<br>
+"Решение"<br>
+function saleHotdogs(n){<br>
+    return ?<br>
+} <br>
+</body>
+</html>

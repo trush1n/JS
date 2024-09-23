@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение JS #12: оператор цикла --for..in и for..of</title>
+    <script src="index12.js"></script>
+    <p>Описание:</p>
+В уроке № 11 мы узнали, что forцикл может использоваться для обхода массива.<br> Если мы хотим обойти объект, мы можем использовать вариант for:<br> for..in. Это может обойти все ключи объекта. <p>Пример:</p>
+<br>
+<p>
+<pre>function showObjectKeys(obj){</p><br>
+<p>for (var key in obj){</p><br>
+    console.log(key);<br>
+  }<br>
+}<br>
+function showObjectValues(obj){<br>
+  for (var key in obj){<br>
+    console.log(obj[key]);<br>
+  }<br>
+}<br>
+var ob={item1:"This",item2:"is",item3:"an",item4:"example"};<br>
+console.log("keys of ob:")<br>
+showObjectKeys(ob);<br>
+console.log("values of ob:")<br>
+showObjectValues(ob);<br>
+</pre><br>
+<h4>Результаты кода:</h4><br>
+<br>
+<pre>
+keys of ob:<br>
+item1<br>
+item2<br>
+item3<br>
+item4<br>
+values of ob:<br>
+This<br>
+is<br>
+an<br>
+example<br>
+for..inтакже может использоваться с массивами. Изменение кода выше:<br>
+<br>
+function showObjectKeys(obj){<br>
+  for (var key in obj){<br>
+    console.log(key);<br>
+  }<br>
+}<br>
+function showObjectValues(obj){<br>
+  for (var key in obj){<br>
+    console.log(obj[key]);<br>
+  }<br>
+}<br>
+var arr=["one","two","three"];<br>
+console.log("keys of arr:")<br>
+showObjectKeys(arr);<br>
+console.log("values of arr:")<br>
+showObjectValues(arr);<br>
+Результаты кода:<br>
+
+keys of arr:<br>
+0<br>
+1<br>
+2<br>
+values of arr:<br>
+one<br>
+two<br>
+three<br>
+</pre>
+Как вы видите, ключи — это индексы элементов массива.<br> Важно: при использовании for..inс массивом ключ (индекс) всегда является строкой, а не числом.<br> В примере выше ключи — это «0», «1» и «2».<br> Мы не можем видеть кавычки, потому что console.log() их не показывает.<br>
+<br>
+Хотя for..inможет использоваться для обхода массива, <br>это не рекомендуется, поскольку в некоторых случаях порядок может быть неожиданным. <br>Поэтому рекомендуется использовать другой вариант для этого:<br> for..of(новый в ES6). for..ofможет обойти все значения массива (без доступа к ним через индекс). <br>Функцию showObjectValues()выше можно изменить следующим образом:<br>
+<br>
+<pre>
+function showArrayValues(arr){<br>
+  for (var value of arr){<br>
+    console.log(value);<br>
+  }<br>
+}</pre>
+Хорошо, урок окончен, давайте выполним задание for..in.<br>
+<br>
+Задача<br>
+Функция giveMeFiveпринимает 1 параметр, objкоторый является объектом.<br>
+<br>
+Создайте массив (который вы в конечном итоге вернете). Затем пройдитесь по нему obj,<br> проверяя каждый ключ и значение. Если длина ключа равна 5, то поместите ключ в ваш массив.<br> Отдельно, если длина значения равна 5, то поместите значение в ваш массив.<br>
+<br>
+В конце верните ваш массив.<br>
+<br>
+Вам следует использовать for..inв своем коде,<br> в противном случае ваше решение может не пройти этот тест.<br>
+<pre>
+function giveMeFive(obj){
+  //coding here
+  
+}
+</pre>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение JS #4: Базовые типы данных — Массив</title>
+    <script src="index4.js"></script>
+</head>
+<body>
+    <h4>В javascript Array — один из базовых типов данных. <br> Чтобы определить пустой массив, можно использовать var arr=new Array()илиvar arr=[] <br>
+
+Массив имеет атрибут: length, если существует массив с именем arr, <br> используется arr.lengthдля определения количества элементов, содержащихся в массиве. <br>
+
+Каждый элемент массива имеет index, используемый arr[index]для получения значения элемента. <br>
+
+indexвсегда начинаются с 0, поэтому первый элемент массива — arr[0], <br> последний элемент массива — arr[arr.length-1]. <br>
+
+Если мы хотим добавить новые элементы в массив, можно использовать метод array: push().  <br>Он может добавить элемент в конец массива. Вместо этого, если мы хотим удалить последний элемент массива, <br> можно использовать метод array: pop(). например:
+<br>
+var arr=[1,2,3];     //define an array arr contains elements 1 2 3 <br>
+arr.push(4);         //add element 4 to arr <br>
+console.log(arr)     //[1,2,3,4] <br>
+arr.pop();           //remove the last element from arr <br>
+console.log(arr)     //[1,2,3] <br>
+Задача <br>
+Я написал пять функций. Каждая функция получает параметр arr, <br> который является массивом. Завершите функции, используя arrвнутри тел функций. <br>
+
+    1. getLength(arr)    should return length of arr <br>
+    2. getFirst(arr)     should return the first element of arr <br>
+    3. getLast(arr)      should return the last element of arr <br>
+    4. pushElement(arr)  should push an element to arr, and then return arr <br>
+    5. popElement(arr)   should pop an element from arr, and then return arr <br>
+Закончив работу, нажмите «Выполнить тесты», чтобы проверить, правильно ли работает ваш код. <br>
+<br>
+В конце нажмите «Отправить», чтобы отправить свой код для прохождения этого ката.</h4>
+</body>
+</html>
