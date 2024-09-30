@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Обучение JS #18: Методы объекта String — concat() split() и его хороший друг join()</title>
+    <script src="index18.js"></script>
+</head>
+<body>
+    <pre>
+        На этот раз мы изучим два метода для разделения или объединения строк: split()и concat(). также изучим хорошего друга метода split(): join(). Это метод Array. Их использование:
+
+        stringObject.split(separator,howmany)
+        stringObject.concat(string1,string2,...,stringx)
+        arrayObject.join(separator)
+        split()может разделить строку на несколько частей с помощью указанного разделителя. Результатом является массив строк. Разделенная строка не включает в себя сам разделитель. Одно из его классических применений — разделение предложения на массив слов:
+        
+        var str="My name is John";
+        var words=str.split(" ");
+        console.log(words);
+        //output:
+        [ 'My', 'name', 'is', 'John' ]
+        В примере выше мы используем пробел как разделитель, делим предложение на 4 слова. Если указать вторые параметры, то будет так:
+        
+        var str="My name is John";
+        var words1=str.split(" ",3);
+        console.log("words1:",words1);
+        var words2=str.split(" ",5);
+        console.log("words2:",words2);
+        
+        //output:
+        words1:[ 'My', 'name', 'is' ]
+        words2:[ 'My', 'name', 'is', 'John' ]
+        Если мы укажем число меньше 4, результатом будет указанное количество строк; если число разделов слишком велико, результаты будут такими же, как и результаты по умолчанию.
+        
+        Если мы используем пустую строку в качестве разделителя, то получим массив строк, содержащих каждый символ:
+        
+        var str="My name is John";
+        var words=str.split("");
+        console.log(words);
+        
+        //output:
+        [ 'M', 'y', ' ', 'n', 'a', 'm', 'e', ' ', 'i', 's', ' ', 'J', 'o', 'h', 'n' ]
+        Split может использовать регулярные выражения для разделения строки. Но поскольку мы не научились использовать регулярные выражения, нам не нужно изучать это использование.
+        
+        concat()можно объединить несколько строк в одну, например:
+        
+        var str="My".concat("name","is","John");
+        console.log(str);
+        
+        //output:
+        MynameisJohn
+        На самом деле, мы редко видим фактическое использование concat(), потому что у нас есть более простой способ, а именно использование +оператора:
+        
+        var str="My"+"name"+"is"+"John";
+        console.log(str);
+        
+        //output:
+        MynameisJohn
+        Но даже при использовании +оператора четыре слова не являются идеальной комбинацией предложения, поскольку нет разделителя-пробела. Что нам делать? Использование join()— лучший выбор.
+        
+        join()это обратная операция метода split(). Мы можем увидеть много кода в реальном использовании:
+        
+        var str="My name is John";
+        var words=str.split(" ");
+        console.log("use split():",words);
+        var s=words.join(" ");
+        console.log("use join():",s);
+        console.log("use split() and join():",str.split(" ").join(" "))
+        //output:
+        use split():[ 'My', 'name', 'is', 'John' ]
+        use join():My name is John
+        use split() and join():My name is John
+        Хорошо, урок окончен. Давайте выполним какое-нибудь задание.
+        
+        Задача
+        Реализуйте функцию, которая принимает 2 аргумента: stringи separator.
+        
+        Ожидаемый алгоритм: разбить stringна слова пробелами, разбить каждое слово на отдельные символы и соединить их обратно с указанным separator, соединить все полученные «слова» обратно в предложение пробелами.
+        
+        Например:
+        
+        splitAndMerge("My name is John", " ")  ==  "M y n a m e i s J o h n"
+        splitAndMerge("My name is John", "-")  ==  "M-y n-a-m-e i-s J-o-h-n"
+        splitAndMerge("Hello World!", ".")     ==  "H.e.l.l.o W.o.r.l.d.!"
+        splitAndMerge("Hello World!", ",")     ==  "H,e,l,l,o W,o,r,l,d,!"
+
+    </pre>
+    
+</body>
+</html>
