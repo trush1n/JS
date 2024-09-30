@@ -2,10 +2,11 @@ function splitAndMerge(string, separator) {
     let words = []
     let words1 = []
     if (separator == " ") {
-        for (let i = 0; i < string.length; i++) {
-            words1 += string[i] + " "
-        }
-    } else if (separator == "") {
+        words = (string.split(" ").join(""))
+             words1 = (words.split("").join(" "))
+       
+           
+      } else if  (separator == "") {
         for (let i = 0; i < string.length; i++) {
             if (string[i] == " ") {
                 words1 += ""
@@ -32,5 +33,10 @@ function splitAndMerge(string, separator) {
         }
 
     }
-    return words1;
+    console.log(words1);
 }
+
+splitAndMerge("My name is John"," ")// , "M y n a m e i s J o h n");
+splitAndMerge("My name is John","-") , "M-y n-a-m-e i-s J-o-h-n");
+splitAndMerge("Hello World!",".") , "H.e.l.l.o W.o.r.l.d.!");
+splitAndMerge("Hello World!",",") , "H,e,l,l,o W,o,r,l,d,!");
