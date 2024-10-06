@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training JS #19: Methods of String object--toUpperCase() toLowerCase() and replace()</title>
+    <script src="index19.js"></script>
+</head>
+<body>
+    <pre>
+        Описание:
+На этот раз мы изучим три строковых метода, используемых для изменения содержимого строки: toUpperCase() toLowerCase()и replace(). Их использование:
+
+stringObject.toUpperCase()
+stringObject.toLowerCase()
+stringObject.replace(substring/regexp,replacement)
+toUpperCase()и toLowerCase()использование очень простое. Не нужно принимать никаких параметров. Он может преобразовывать все символы в строке в верхний или нижний регистр. как это:
+
+var str="My name is John";
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+//output:
+MY NAME IS JOHN
+my name is john
+Ниже приведен классический пример использования. Напишите заглавную первую букву предложения:
+
+var str="this is an example.";
+var result=str[0].toUpperCase()+str.slice(1);
+console.log(result);
+
+//output:
+This is an example.
+Пример ниже — сделать заглавной первую букву всех слов в предложении. Мы использовали split()и , join()которые мы узнали в прошлый раз.
+
+var str="this is an example.";
+var words=str.split(" ");
+for (var i=0;i<words.length;i++){
+  words[i]=words[i][0].toUpperCase()+words[i].slice(1);
+}
+console.log(words.join(" "));
+
+//output:
+This Is An Example.
+Кажется, это немного сложно. Давайте изучим новый метод, чтобы улучшить это.
+
+replace()можно заменить указанный текст (параметр 1) в строке параметром 2. Например:
+
+var str="this is an example.";
+var result=str.replace("this","that");
+console.log(result);
+
+//output:
+that is an example.
+Давайте используем replace(), чтобы улучшить пример выше (первая буква сделана заглавной):
+
+var str="this is an example.";
+var words=str.split(" ");
+for (var i=0;i<words.length;i++){
+  words[i]=words[i].replace(words[i][0],words[i][0].toUpperCase());
+}
+console.log(words.join(" "));
+
+//output:
+This Is An Example.
+Если параметр 1 replace()является регулярным выражением, то все будет проще (нам даже не нужно разбивать строку):
+
+var str="this is an example.";
+var result=str.replace(/\b\w/g,x=>x.toUpperCase());
+console.log(result);
+
+//output:
+This Is An Example.
+Этот код использует регулярное выражение и стрелочную функцию. Это позволяет нам достичь более мощной роли в коде. Все это мы изучим в будущем уроке. Сейчас нам нужно изучить основы.
+
+Еще один момент, на который следует обратить внимание: если replace()в качестве параметра 1 используется регулярное выражение, то заменяются все символы, соответствующие регулярному выражению (регулярное выражение использует глобальную опцию сопоставления g). Если в качестве параметра 1 используется строка, то заменяется только первое совпадение (слева направо) строки. Например:
+
+var str="example";
+var result=str.replace("e","@");
+console.log(result);
+
+//output:
+@xample
+Как видите, вторая буква «е» не будет заменена.
+
+Хорошо, урок окончен. Давайте выполним какое-нибудь задание.
+
+Задача
+Кодирование в функции alienLanguage, функция принимает 1 параметр: str. str— это предложение.
+
+Мы переводим предложение на иностранный язык по следующим правилам:
+
+Каждое слово в предложении отделено пробелами. Последняя буква каждого слова в предложении становится строчной, а остальные буквы заглавными. Выглядит очень странно? Потому что это форма инопланетного языка ;-)
+
+например:
+
+alienLanguage("My name is John") should return "My NAMe Is JOHn"
+alienLanguage("this is an example") should return "THIs Is An EXAMPLe"
+alienLanguage("Hello World") should return "HELLo WORLd"
+Небольшая подсказка: первое преобразование всей строки упростит код.
+    </pre>
+    
+</body>
+</html>
