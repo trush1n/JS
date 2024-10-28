@@ -12,6 +12,7 @@ function remove(string) {
     console.log(noStringLast)
   }
 
+
   remove("Hi!")//, "Hi")
   remove("Hi!!!")//, "Hi")
   remove("!Hi")//, "!Hi")
