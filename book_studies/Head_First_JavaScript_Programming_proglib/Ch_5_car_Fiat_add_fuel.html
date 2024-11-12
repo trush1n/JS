@@ -19,6 +19,9 @@
             fuel: 0,
 
             start: function () {
+                if (this.fuel > 0){
+                    alert("The car is on empty, fill up before starting")
+                }
                 this.started = true;
             },
             stop: function () {
