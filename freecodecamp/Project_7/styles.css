@@ -42,8 +42,10 @@ nav > ul > li {
   display: block;
 }
 
-a {
-  color:property;
+
+
+li > a {
+  color: inherit;
 }
 
 h1,
