@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use the parseInt Function with a Radix</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <pre>
+        Используйте функцию parseInt с Radix
+        Функция parseInt()анализирует строку и возвращает целое число. Она принимает второй аргумент для основания, которое указывает основание числа в строке. Основание может быть целым числом от 2 до 36.
+        
+        Вызов функции выглядит так:
+        
+        parseInt(string, radix);
+        И вот пример:
+        
+        const a = parseInt("11", 2);
+        Переменная radix указывает, что 11это двоичная система счисления или основание 2. В этом примере строка преобразуется 11в целое число 3.
+        
+        Используйте parseInt()в convertToIntegerфункции, чтобы она преобразовала двоичное число в целое число и вернула его.
+        
+ 
+        
+ 
+        Ожидающий :1. convertToIntegerследует использовать parseInt()функцию
+        Ожидающий :2. convertToInteger("10011")должен вернуть число
+        Ожидающий :3. convertToInteger("10011")должен вернуться 19
+        Ожидающий :4. convertToInteger("111001")должен вернуться 57
+        Ожидающий :5. convertToInteger("JamesBond")должен вернутьсяNaN
+
+    </pre>
+    
+</body>
+</html>
