@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use the Conditional (Ternary) Operator</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <pre>
+        Используйте условный (тернарный) оператор
+Условный оператор , также называемый тернарным оператором , можно использовать как однострочное выражение if-else.
+
+Синтаксис имеет вид a ? b : c, где a— условие, b— код, который будет выполнен при возврате условия true, c— код, который будет выполнен при возврате условия false.
+
+Следующая функция использует if/elseоператор для проверки условия:
+
+function findGreater(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater or equal";
+  }
+}
+Это можно переписать с использованием условного оператора:
+
+function findGreater(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
+Используйте условный оператор в checkEqualфункции, чтобы проверить, равны ли два числа или нет. Функция должна возвращать либо строку Equal, либо строку Not Equal.
+
+
+Тесты
+Ожидающий :1. checkEqualследует использовать условный оператор
+Ожидающий :2. checkEqual(1, 2)должен вернуть строкуNot Equal
+Ожидающий :3. checkEqual(1, 1)должен вернуть строкуEqual
+Ожидающий :4. checkEqual(1, -1)должен вернуть строкуNot Equal
+    </pre>
+    
+</body>
+</html>
