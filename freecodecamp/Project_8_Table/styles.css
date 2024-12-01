@@ -50,6 +50,7 @@ section {
   display: flex;
   justify-content: flex-end;
   position: sticky;
+  z-index: 999;
   top: 0;
   background: #0a0a23;
   color: #fff;
