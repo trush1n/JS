@@ -31,55 +31,55 @@ function isIsogram(str) {
         case ("a"):
           a_count++;
           break;
-        case ("b"): b_count++
+        case ("b"): b_count++;
           break;
         case ("c"): c_count++;
           break;
-        case ("d"): d_count++
+        case ("d"): d_count++;
           break;
         case ("e"): e_count++;
           break;
-        case ("f"): f_count++
+        case ("f"): f_count++;
           break;
         case ("g"): g_count++;
           break;
-        case ("h"): h_count++
+        case ("h"): h_count++;
           break;
         case ("i"): i_count++;
           break;
-        case ("j"): j_count++
+        case ("j"): j_count++;
           break;
         case ("k"): k_count++;
           break;
-        case ("l"): l_count++
+        case ("l"): l_count++;
           break;
         case ("m"): m_count++;
           break;
-        case ("n"): n_count++
+        case ("n"): n_count++;
           break;
         case ("o"): o_count++;
           break;
-        case ("p"): p_count++
+        case ("p"): p_count++;
           break;
-        case ("q"): q_count++
+        case ("q"): q_count++;
           break;
-        case ("r"): r_count++
+        case ("r"): r_count++;
           break;
-        case ("s"): s_count++
+        case ("s"): s_count++;
           break;
-        case ("t"): t_count++
+        case ("t"): t_count++;
           break;
-        case ("u"): u_count++
+        case ("u"): u_count++;
           break;
-        case ("v"): v_count++
+        case ("v"): v_count++;
           break;
-        case ("w"): w_count++
+        case ("w"): w_count++;
           break;
-        case ("x"): x_count++
+        case ("x"): x_count++;
           break;
-        case ("y"): y_count++
+        case ("y"): y_count++;
           break;
-        case ("z"): z_count++
+        case ("z"): z_count++;
           break;
       }
     }
